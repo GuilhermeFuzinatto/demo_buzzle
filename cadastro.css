@@ -2,13 +2,17 @@
 
 Amarelo Principal: #ffda33
 Branco: #f2f2f2
+Marrom: #613a18
+Azul Escuro: #120c30
 Background Branco: linear-gradient(#ededed, #fdfdfd);
-Background: linear-gradient(#fff09b, #ffe65b);
+Background Amarelo: linear-gradient(#fff09b, #ffe65b);
 
 */
 
 html{
     height: 1000px;
+    background-image: url("imagens/colmeia21.jpg");
+    opacity: 70%;
 }
 
 body{
@@ -19,23 +23,22 @@ body{
 }
 
 header{
-    height: 10%;
-    background-image: linear-gradient(#ededed, #fdfdfd);
+    height: 25%;
+    background-image: linear-gradient(#b4b4b4, #fdfdfd, transparent);
 }
 
 main{
-    height: 70%;
-    background-image: url("imagens/colmeia2.jpg");
-}
-
-div{
-    height: 30%;
-    width: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+    width: 70%;
     background-color: #fdfdfd;
-    border-radius: 150px;
+    border-radius: 15vh;
 }
 
 footer{
-    height: 20%;
-    background-image: linear-gradient(#fdfdfd, #ededed);
+    height: 35%;
+    background-image: linear-gradient(transparent, #fdfdfd, #b4b4b4);
 }
