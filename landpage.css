@@ -11,8 +11,7 @@ Background Amarelo: linear-gradient(#fff09b, #ffe65b);
 
 html{
     height: 1000px;
-    background-image: url("imagens/colmeia2.jpg");
-    opacity: 70%;
+    background-image: url("imagens/colmeia21.jpg");
 }
 
 body{
@@ -25,28 +24,30 @@ body{
 header{
     height: 25%;
     background-image: linear-gradient(#e4e4e4, #fdfdfd, transparent);
+}
+
+.secheader{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-header div{
-    height: 40%;
-    margin-top: 1%;
+    align-items: center;
+    width: 100%;
+    height: 50%;
 }
 
 .headerlogo{
+    height: 40%;
     width: 20%;
 }
 
 .logo{
     width: 80%;
-    margin-top: -10%;
     margin-left: 50%;
     transform: translate(-50%);
 }
 
 .navegacao{
+    height: 40%;
     width: 50%;
 }
 
@@ -65,6 +66,7 @@ header div{
 }
 
 .headerbotoes{
+    height: 40%;
     width: 20%;
     display: flex;
     flex-wrap: wrap;
@@ -74,7 +76,7 @@ header div{
 .botaolog{
     margin-top: 5%;
     width: 40%;
-    height: 40%;
+    height: 60%;
     border: 0.70vh solid #613a18;
     border-radius: 1.5vh;
     text-align: center;
@@ -92,7 +94,7 @@ header div{
 .botaocad{
     margin-top: 5%;
     width: 40%;
-    height: 40%;
+    height: 60%;
     border: 0.70vh solid #613a18;
     border-radius: 1.5vh;
     text-align: center;
@@ -120,14 +122,36 @@ main{
 
 footer{
     height: 35%;
-    background-image: linear-gradient(transparent, #fdfdfd, #b4b4b4);
+    background-image: linear-gradient(transparent, #fdfdfd, #e4e4e4);
     display: flex;
-    flex: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-footer div{
-    background-color: red;
+.secfooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+.secfooter div{
     width: 30%;
-    height: 20%;
+    height: 70%;
+}
+
+.governo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ccm{
+    width: 23%;
+    height: 90%;
+}
+
+.parana{
+    width: 35%;
 }
