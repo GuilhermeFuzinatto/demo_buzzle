@@ -1,11 +1,12 @@
 *{
-   margin: 0;
-padding: 0; 
+    margin: 0;
+    padding: 0; 
 }
 
 html{
     height: 1000px;
     background-image: url("imagens/colmeia21.jpg");
+    overflow-x: hidden;
 }
 
 body{
@@ -121,12 +122,26 @@ main{
     height: 100%;
     -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 25%);
     display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-main p{
+/*
+main h1{
     width: 100%;
-    margin-top: 50%;
-    margin-left: 5%;
+    font-size: 2.5rem;
+}
+
+.h1primeiro{
+    margin-top: 25%;
+}
+*/
+
+.carrossel{
+    margin-top: 55%;
+    width: 50%;
+    height: 50%;
+    background-color: red;
 }
 
 footer{
