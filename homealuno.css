@@ -1,11 +1,14 @@
+*{
+   margin: 0;
+padding: 0; 
+}
+
 html{
     height: 1000px;
     background-image: url("imagens/colmeia21.jpg");
 }
 
 body{
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100%;
 }
@@ -103,6 +106,7 @@ header{
     align-content: center;
     font-size: 2.5rem;
     color: #613a18;
+    cursor: pointer;
 }
 
 .fundo div:hover{
@@ -116,6 +120,13 @@ main{
     width: 100%;
     height: 100%;
     -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 25%);
+    display: flex;
+}
+
+main p{
+    width: 100%;
+    margin-top: 50%;
+    margin-left: 5%;
 }
 
 footer{
