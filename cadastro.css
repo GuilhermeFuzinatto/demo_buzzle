@@ -13,6 +13,7 @@ body{
 main{
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .secmain{
@@ -30,6 +31,10 @@ main{
     height: 30rem;
     border-radius: 10vh;
     z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     /*temporario*/
     text-align: center;
 }
@@ -43,6 +48,7 @@ main{
     height: 30rem;
     cursor: pointer;
     opacity: 0;
+    transition: 2s;
 }
 
 .inputprof:hover ~ .secmain .divprof{
@@ -52,8 +58,15 @@ main{
 }
 
 .inputprof:checked ~ .secmain .divalun{
-    display: none;
-    transition: 1s;
+    transform: translateX(200%);
+    transition: 0.5s;
+}
+
+.inputprof:checked ~ .secmain .divprof{
+    margin-left: 50%;
+    transform: translate(-50%);
+    height: 45rem;
+    transition: 0.5s;
 }
 
 .inputalun{
@@ -71,4 +84,30 @@ main{
     scale: 105%;
     filter: brightness(95%);
     transition: 0.2s;
+}
+
+.inputalun:checked ~ .secmain .divprof{
+    transform: translateX(-200%);
+    display: flex;
+    transition: 0.5s;
+}
+
+.inputalun:checked ~ .secmain .divalun{
+    margin-right: 50%;
+    transform: translate(50%);
+    height: 45rem;
+    transition: 0.5s;
+}
+
+main input:checked{
+    display: none;
+}
+
+.inputprof:checked ~ .secmain .divprof .cadprof{
+    display: block;
+}
+
+.cadprof{
+    border: 1px solid red;
+    display: none;
 }
