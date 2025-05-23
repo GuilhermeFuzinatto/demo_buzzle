@@ -4,7 +4,7 @@
 }
 
 html{
-    height: 1000px;
+    height: 100%;
     background-image: url("imagens/colmeia21.jpg");
     overflow-x: hidden;
 }
@@ -15,7 +15,7 @@ body{
 }
 
 header{
-    height: 25%;
+    height: 15.625rem;
     background-image: linear-gradient(#e4e4e4, #fdfdfd, transparent);
 }
 
@@ -25,11 +25,11 @@ header{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 50%;
+    height: 7.5rem;
 }
 
 .headerlogo{
-    height: 40%;
+    height: 6rem;
     width: 20%;
 }
 
@@ -40,7 +40,7 @@ header{
 }
 
 .navegacao{
-    height: 40%;
+    height: 6rem;
     width: 50%;
 }
 
@@ -59,7 +59,7 @@ header{
 }
 
 .headerbotoes{
-    height: 40%;
+    height: 6rem;
     width: 20%;
     display: flex;
     flex-wrap: wrap;
@@ -91,7 +91,7 @@ header{
 
 .fundo{
     width: 100%;
-    height: 20%;
+    height: 10rem;
     display: flex;
     justify-content: space-evenly;
     align-items: end;
@@ -102,7 +102,7 @@ header{
     border: 0.25rem solid #ffda33;
     border-radius: 5vh;
     width: 25%;
-    height: 50%;
+    height: 6.25rem;
     text-align: center;
     align-content: center;
     font-size: 2.5rem;
@@ -125,18 +125,29 @@ main{
 }
 
 .mainsec{
-    margin-top: 20%;
-    margin-left: 10%;
+    margin-top: 10rem;
+    margin-left: 8rem;
     width: 80%;
-    height: 40%;
+    height: 25.6rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
+
 .mainsec h1{
     width: 100%;
     font-size: 2.5rem;
+}
+
+.mask{
+    z-index: 1;
+    position: absolute;
+    top: 43.9rem;
+    background-color: #fdfdfd;
+    width: 80%;
+    height: 15.6rem;
+    -webkit-mask-image: linear-gradient(to right, transparent 85%, black 100%);
 }
 
 .carrossel{
@@ -150,7 +161,6 @@ main{
 .seccarrossel{
     width: max-content;
     display: flex;
-    -webkit-mask-image: linear-gradient(to left, transparent 5%, black 25%);
     transition: transform 0.5s ease;
 }
 
@@ -199,9 +209,8 @@ main{
     right: 0.5rem;
 }
 
-
 footer{
-    height: 35%;
+    height: 22.4rem;
     background-image: linear-gradient(#fdfdfd, #e4e4e4);
     display: flex;
     flex-direction: column;
@@ -214,7 +223,7 @@ footer{
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 50%;
+    height: 11.2rem;
 }
 
 .secfooter div{
@@ -236,13 +245,13 @@ footer{
 
 .contatos div div{
     width: 100%;
-    height: 25%;
+    height: 4rem;
     display: flex;
     align-items: center;
 }
 
 .conttitle{
-    height: 20%;
+    height: 3.2rem;
     width: 100%;
     font-size: 1.5rem;
     margin: 0;
