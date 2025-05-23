@@ -1,18 +1,19 @@
 let currentIndex = 0;
 
 function moveSlide(step) {
-    const slides = document.querySelectorAll('.divcarrossel');
-    const totalSlides = slides.length;
-    
-    // Verifica se o carrossel não ultrapassou o limite
-    if (currentIndex + step >= totalSlides || currentIndex + step < 0) {
-        return;  // Não faz nada se o limite for atingido
-    }
-    
-    // Se o índice for válido, atualiza a posição
-    currentIndex = currentIndex + step;
+    const slide = document.querySelector('.divcarrossel');
+    const slideWidth = slide.offsetWidth + 32; // 32px = 2rem margin-right
+    const totalSlides = document.querySelectorAll('.divcarrossel').length;
 
-    // Atualiza o transform do carrossel para mostrar o slide correspondente
-    const carrossel = document.querySelector('.seccarrossel');
-    carrossel.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+    // Número de slides visíveis no viewport
+    const visibleWidth = document.querySelector('.carrossel').offsetWidth;
+    const visibleCount = Math.floor(visibleWidth / slideWidth);
+    const maxIndex = totalSlides - visibleCount;
+
+    if (currentIndex + step < 0 || currentIndex + step > maxIndex) return;
+
+    currentIndex += step;
+
+    const seccarrossel = document.querySelector('.seccarrossel');
+    seccarrossel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
