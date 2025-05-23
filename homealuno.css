@@ -132,7 +132,6 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: red;
 }
 
 .mainsec h1{
@@ -146,44 +145,57 @@ main{
     display: flex;
     align-items: center;
     position: relative;
-    background-color: blue;
 }
 
 .seccarrossel{
     width: max-content;
     display: flex;
+    -webkit-mask-image: linear-gradient(to left, transparent 5%, black 25%);
     transition: transform 0.5s ease;
-    background-color: green;
 }
 
 .divcarrossel{
     flex: 0 0 15rem;
     height: 15rem;
     margin-right: 2rem;
-    background-color: yellow;
+    border: 0.25rem solid #ffda33;
+    border-radius: 5vh;
+    background-color: #fdfdfd;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.carrossel button {
+.divcarrossel:hover{
+    filter: brightness(95%);
+    transition: 0.2s;
+}
+
+.carrossel button{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
-    background-color: rgba(0, 255, 255, 0.8);
-    border: none;
+    background-color: #fdfdfd;
+    color: #969696;
+    border: 0.2rem solid #969696;
     cursor: pointer;
+    font-size: 1.5rem;
     z-index: 2;
 }
 
-.carrossel button:first-of-type {
+.carrossel button:hover{
+    filter: brightness(95%);
+}
+
+.carrossel button:first-of-type{
     left: 0.5rem;
 }
 
-.carrossel button:last-of-type {
+.carrossel button:last-of-type{
     right: 0.5rem;
 }
 
