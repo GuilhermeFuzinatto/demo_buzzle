@@ -35,79 +35,25 @@ main{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /*temporario*/
-    text-align: center;
-}
-
-.inputprof{
-    position: absolute;
-    z-index: 3;
-    margin-left: 16.7%;
-    margin-top: 12.2%;
-    width: 30rem;
-    height: 30rem;
     cursor: pointer;
-    opacity: 0;
-    transition: 2s;
 }
 
-.inputprof:hover ~ .secmain .divprof{
-    scale: 105%;
-    filter: brightness(95%);
+.divprof:not(:hover){
     transition: 0.2s;
 }
 
-.inputprof:checked ~ .secmain .divalun{
-    transform: translateX(200%);
-    transition: 0.5s;
-}
-
-.inputprof:checked ~ .secmain .divprof{
-    margin-left: 50%;
-    transform: translate(-50%);
-    height: 45rem;
-    transition: 0.5s;
-}
-
-.inputalun{
-    position: absolute;
-    z-index: 3;
-    margin-left: 58.4%;
-    margin-top: 12.2%;
-    width: 30rem;
-    height: 30rem;
-    cursor: pointer;
-    opacity: 0;
-}
-
-.inputalun:hover ~ .secmain .divalun{
-    scale: 105%;
+.divprof:hover{
     filter: brightness(95%);
+    scale: 105%;
     transition: 0.2s;
 }
 
-.inputalun:checked ~ .secmain .divprof{
-    transform: translateX(-200%);
-    display: flex;
-    transition: 0.5s;
+.divalun:not(:hover){
+    transition: 0.2s;
 }
 
-.inputalun:checked ~ .secmain .divalun{
-    margin-right: 50%;
-    transform: translate(50%);
-    height: 45rem;
-    transition: 0.5s;
-}
-
-main input:checked{
-    display: none;
-}
-
-.inputprof:checked ~ .secmain .divprof .cadprof{
-    display: block;
-}
-
-.cadprof{
-    border: 1px solid red;
-    display: none;
+.divalun:hover{
+    filter: brightness(95%);
+    scale: 105%;
+    transition: 0.2s;
 }
