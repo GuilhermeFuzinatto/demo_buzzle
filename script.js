@@ -2,12 +2,15 @@
 function aniprof(){
     document.getElementById('divprof').className = 'animacaoprof';
     document.getElementById('divalun').className = 'tiraalun';
+    document.getElementById('efeitoprof').className = 'efx';
     document.getElementById('secmain').className = 'secmain';
 }
 
 function anialun(){
     document.getElementById('divalun').className = 'animacaoalun';
     document.getElementById('divprof').className = 'tiraprof';
+    document.getElementById('efeitoalun').className = 'efx';
+    document.getElementById('secmain').className = 'secmain';
 }
 
 //CARROSSEL
