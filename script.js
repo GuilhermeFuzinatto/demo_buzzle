@@ -1,3 +1,16 @@
+//ANIMACAO CADASTRO
+function aniprof(){
+    document.getElementById('divprof').className = 'animacaoprof';
+    document.getElementById('divalun').className = 'tiraalun';
+    document.getElementById('secmain').className = 'secmain';
+}
+
+function anialun(){
+    document.getElementById('divalun').className = 'animacaoalun';
+    document.getElementById('divprof').className = 'tiraprof';
+}
+
+//CARROSSEL
 let currentIndex = 0;
 
 function moveSlide(step) {

@@ -14,9 +14,11 @@ main{
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-.secmain{
+#secmain{
     width: 100%;
     height: 100%;
     display: flex;
@@ -25,8 +27,9 @@ main{
     align-items: center;
 }
 
-.secmain div{
+#secmain button{
     background-color: #fdfdfd;
+    border: none;
     width: 30rem;
     height: 30rem;
     border-radius: 10vh;
@@ -38,22 +41,103 @@ main{
     cursor: pointer;
 }
 
-.divprof:not(:hover){
-    transition: 0.2s;
-}
-
-.divprof:hover{
+/*efeito ao passar o mouse*/
+#divprof:not(:focus):hover{
     filter: brightness(95%);
     scale: 105%;
     transition: 0.2s;
 }
 
-.divalun:not(:hover){
+/*efeito ao tirar o mouse*/
+#divprof:not(:hover){
     transition: 0.2s;
 }
 
-.divalun:hover{
+/*remove efeitos após o clique*/
+#divprof:focus{
+    outline: none;
+}
+
+/*efeito ao passar o mouse*/
+#divalun:not(:focus):hover{
     filter: brightness(95%);
     scale: 105%;
     transition: 0.2s;
 }
+
+/*efeito ao tirar o mouse*/
+#divalun:not(:hover){
+    transition: 0.2s;
+}
+
+/*remove efeitos após o clique*/
+#divalun:focus{
+    outline: none;
+}
+
+/*animação ao clicar no divprof*/
+.animacaoprof{
+    animation: animaprof 2s forwards;
+}
+
+.tiraalun{
+    animation: tiraalun 2s forwards;
+}
+
+.secmain{
+    animation: secao 2s forwards;
+}
+
+@keyframes animaprof{
+    to{
+        transform: translate(70%);
+        height: 40rem;
+        width: 35rem;
+    }
+}
+
+@keyframes tiraalun{
+    to{
+        transform: translateX(175%);
+    }
+}
+
+@keyframes secao{
+    to{
+        width: 200%;
+    }
+}
+
+/*animação ao clicar no divalun*/
+.animacaoalun{
+    animation: animaalun 2s forwards;
+}
+
+.tiraprof{
+    animation: tiraprof 2s forwards;
+}
+
+.secmain{
+    animation: secao 2s forwards;
+}
+
+@keyframes animaalun{
+    to{
+        transform: translate(-70%);
+        height: 40rem;
+        width: 35rem;
+    }
+}
+
+@keyframes tiraprof{
+    to{
+        transform: translateX(-175%);
+    }
+}
+
+@keyframes secao{
+    to{
+        width: 200%;
+    }
+}
+
