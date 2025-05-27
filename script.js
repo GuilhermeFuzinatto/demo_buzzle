@@ -75,6 +75,10 @@ function anibotao2(){
     }
 }
 
+//CONFIRMAR CADASTRO
+
+
+
 //CARROSSEL HOMEPAGE
 let currentIndex = 0;
 
