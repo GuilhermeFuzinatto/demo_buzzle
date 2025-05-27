@@ -3,17 +3,22 @@ function aniprof(){
     document.getElementById('divprof').className = 'animacaoprof';
     document.getElementById('divalun').className = 'tiraalun';
     document.getElementById('efeitoprof').className = 'efx';
-    document.getElementById('secmain').className = 'secmain';
+    document.getElementById('divcad').className = 'divcad';
 }
 
 function anialun(){
     document.getElementById('divalun').className = 'animacaoalun';
     document.getElementById('divprof').className = 'tiraprof';
     document.getElementById('efeitoalun').className = 'efx';
-    document.getElementById('secmain').className = 'secmain';
+    document.getElementById('divcad').className = 'divcad';
 }
 
-//CARROSSEL
+//VISUALIZAÇÃO DE SENHA CADASTRO
+function anibotao1(){
+    
+}
+
+//CARROSSEL HOMEPAGE
 let currentIndex = 0;
 
 function moveSlide(step) {

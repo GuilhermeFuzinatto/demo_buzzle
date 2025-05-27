@@ -33,6 +33,7 @@ main{
 }
 
 #secmain button{
+    position: relative;
     background-color: #fdfdfd;
     border: none;
     width: 30rem;
@@ -60,6 +61,7 @@ button div{
     height: 0;
     border-radius: 10vh;
     background-color: #ffda33;
+    z-index: 1;
 }
 
 /*efeito ao passar o mouse*/
@@ -111,14 +113,9 @@ button div{
     animation: efeito 0.5s forwards
 }
 
-.secmain{
-    animation: secao 2s forwards;
-    animation-delay: 0.5s;
-}
-
 @keyframes animaprof{
     to{
-        transform: translate(70%);
+        transform: translateX(56.44%);
         height: 40rem;
         width: 35rem;
     }
@@ -127,12 +124,6 @@ button div{
 @keyframes tiraalun{
     to{
         transform: translateX(175%);
-    }
-}
-
-@keyframes secao{
-    to{
-        width: 200%;
     }
 }
 
@@ -158,14 +149,9 @@ button div{
     animation: efeito 0.5s forwards;
 }
 
-.secmain{
-    animation: secao 2s forwards;
-    animation-delay: 0.5s;
-}
-
 @keyframes animaalun{
     to{
-        transform: translate(-70%);
+        transform: translateX(-56.3%);
         height: 40rem;
         width: 35rem;
     }
@@ -184,9 +170,149 @@ button div{
     }
 }
 
-@keyframes secao{
+
+/*div que surge para fazer o cadastro, filhos e efeitos*/
+#divcad{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-radius: 10vh;
+    background-color: #fdfdfd;
+    border: 0.5rem solid #ffda33;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#divcad p{
+    margin-top: 5%;
+    font-size: 4rem;
+}
+
+.divinput{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.divinput input{
+    height: 4rem;
+    margin-left: 10%;
+    background-color: #fdfdfd;
+    border: none;
+    border: 0.1rem solid #ffda33;
+    border-radius: 1.5vh;
+    outline: none;
+    font-size: 1.5rem;
+    padding-left: 2%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.texto{
+    width: 80%;
+}
+
+.senha{
+    width: 70%;
+}
+
+::placeholder{
+    color: #bababa;
+}
+
+.divinput button{
+    display: flex;
+    position: absolute;
+    margin-left: 10%;
+    width: 80%;
+    height: 4rem;
+    background-color: #e4e4e4;
+    border: none;
+    border-radius: 1.5vh;
+    z-index: 0;
+    transition: 0.2s;
+}
+
+.divinput button:last-of-type{
+    margin-top: 12rem;
+}
+
+.divinput button:hover{
+    filter: brightness(95%);
+}
+
+.divinput button img{
+    scale: 60%;
+    margin-left: 85%;
+    cursor: pointer;
+}
+
+.divbutton{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.divbutton button{
+    width: 30%;
+    height: 5rem;
+    border-radius: 2.5vh;
+    font-size: 1.5rem;
+}
+
+.volt{
+    border: 0.2rem solid #ffda33;
+    background-color: #fdfdfd;
+    color: #ffda33;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.volt:hover{
+    filter: brightness(95%);
+    scale: 105%;
+}
+
+.conc{
+    border: 0.2rem solid #ffda33;
+    background-color: #ffda33;
+    color: #fdfdfd;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.conc:hover{
+    filter: brightness(95%);
+    scale: 105%;
+}
+
+.divcad{
+    animation: opaci 0.1s forwards, vemdiv 0.4s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes opaci{
     to{
-        width: 200%;
+        opacity: 1;
     }
 }
 
+@keyframes vemdiv{
+    to{
+        width: 35rem;
+        height: 40rem;
+    }
+}
