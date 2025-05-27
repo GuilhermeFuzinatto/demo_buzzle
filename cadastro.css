@@ -240,6 +240,7 @@ button div{
     background-color: #e4e4e4;
     border: none;
     border-radius: 1.5vh;
+    cursor: pointer;
     z-index: 0;
     transition: 0.2s;
 }
@@ -255,7 +256,6 @@ button div{
 .divinput button img{
     scale: 60%;
     margin-left: 85%;
-    cursor: pointer;
 }
 
 /*animação botao de ver/esconder senha*/
