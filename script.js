@@ -75,9 +75,23 @@ function anibotao2(){
     }
 }
 
-//CONFIRMAR CADASTRO
+/*
+!!!!! PONTO IMPORTANTE A SER RESOLVIDO: REDIRECIONAR PARA PÁGINA DIFERENTE DEPENDENDO SE É ALUNO OU PROFESSOR !!!!!
+| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V
+*/
 
-
+//CONCLUIR CADASTRO
+function conccad(){
+    let s1 = document.getElementById('senha1').value;
+    let s2 = document.getElementById('senha2').value;
+    if(s1!=s2){
+        alert("As senhas são diferentes, por favor tente novamente.");
+    }else{
+        alert("Cadastro concluído!");
+        window.location.href = "homealuno.html";
+    }
+}
 
 //CARROSSEL HOMEPAGE
 let currentIndex = 0;
