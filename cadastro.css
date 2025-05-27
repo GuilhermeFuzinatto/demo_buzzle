@@ -258,6 +258,20 @@ button div{
     cursor: pointer;
 }
 
+/*animação botao de ver/esconder senha*/
+.divinput button {
+    transition: background-color 0.5s;
+}
+
+.divinput button.versenha {
+    background-color: #ffda33;
+}
+
+.divinput button.saisenha {
+    background-color: #e4e4e4;
+}
+
+/*fim animação*/
 .divbutton{
     width: 100%;
     height: 20%;
