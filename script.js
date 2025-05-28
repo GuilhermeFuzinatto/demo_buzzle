@@ -1,3 +1,5 @@
+let currentIndex = 0; //variável do carrossel na homepage
+
 //ANIMACAO CADASTRO
 function aniprof(){
     document.getElementById('divprof').className = 'animacaoprof';
@@ -94,8 +96,6 @@ function conccad(){
 }
 
 //CARROSSEL HOMEPAGE
-let currentIndex = 0;
-
 function moveSlide(step) {
     const slide = document.querySelector('.divcarrossel');
     const slideWidth = slide.offsetWidth + 32; // 32px = 2rem margin-right
@@ -108,7 +108,7 @@ function moveSlide(step) {
 
     if (currentIndex + step < 0 || currentIndex + step > maxIndex) return;
 
-    currentIndex += step;
+    currentIndex = currentIndex + step;
 
     const seccarrossel = document.querySelector('.seccarrossel');
     seccarrossel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
