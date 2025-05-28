@@ -28,6 +28,12 @@ function anivolta(){
         document.getElementById('efeitoprof').className = 'saiefx';
         document.getElementById('divcad').className = 'saidivcad';
         selecprof = 0;
+    }else{
+        document.getElementById('divalun').className = 'voltaalun';
+        document.getElementById('divprof').className = 'vemprof';
+        document.getElementById('efeitoalun').className = 'saiefx';
+        document.getElementById('divcad').className = 'saidivcad';
+        selecaluno = 0;
     }
 }
 
@@ -101,11 +107,19 @@ V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V 
 
 //CONCLUIR CADASTRO
 function conccad(){
+    let em = document.getElementById('txt').value;
     let s1 = document.getElementById('senha1').value;
     let s2 = document.getElementById('senha2').value;
-    if(s1!=s2){
+    
+    //tratamento de erro
+    if(em == 0){
+        alert("Preencha o campo de email.");
+    }else if(s1 == 0 || s2 == 0){
+        alert("Preencha o campo da senha.");
+    }else if(s1!=s2){
         alert("As senhas são diferentes, por favor tente novamente.");
     }else{
+        //conclusão de cadastro
         alert("Cadastro concluído!");
         window.location.href = "homealuno.html";
     }
