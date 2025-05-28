@@ -1,7 +1,11 @@
 let currentIndex = 0; //variável do carrossel na homepage
 
 //ANIMACAO CADASTRO
+let selecprof = 0;
+let selecaluno = 0;
+//SELECIONAR
 function aniprof(){
+    selecprof = 1;
     document.getElementById('divprof').className = 'animacaoprof';
     document.getElementById('divalun').className = 'tiraalun';
     document.getElementById('efeitoprof').className = 'efx';
@@ -9,10 +13,22 @@ function aniprof(){
 }
 
 function anialun(){
+    selecaluno = 1;
     document.getElementById('divalun').className = 'animacaoalun';
     document.getElementById('divprof').className = 'tiraprof';
     document.getElementById('efeitoalun').className = 'efx';
     document.getElementById('divcad').className = 'divcad';
+}
+
+//VOLTAR
+function anivolta(){
+    if(selecprof == 1){
+        document.getElementById('divprof').className = 'voltaprof';
+        document.getElementById('divalun').className = 'vemalun';
+        document.getElementById('efeitoprof').className = 'saiefx';
+        document.getElementById('divcad').className = 'saidivcad';
+        selecprof = 0;
+    }
 }
 
 //VISUALIZAÇÃO DE SENHA CADASTRO

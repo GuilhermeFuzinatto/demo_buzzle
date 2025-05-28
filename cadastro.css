@@ -330,3 +330,35 @@ button div{
         height: 40rem;
     }
 }
+
+/*animação de voltar*/
+/*volta professor*/
+.saidivcad{
+    animation: saiopaci 0.1 forwards, saidivcad 0.4s forwards;
+}
+
+@keyframes saiopaci{
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes saidivcad{
+    to{
+        width: 0;
+        height: 0;
+    }
+}
+
+.saiefx{
+    animation: saiefx 0.5s forwards;
+}
+
+@keyframes saiefx{
+    to{
+        width: 0;
+        height: 0;
+    }
+}
+
+/*volta aluno*/
