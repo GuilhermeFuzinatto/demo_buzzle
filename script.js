@@ -125,6 +125,27 @@ function conccad(){
     }
 }
 
+//VOLTAR LOGIN
+function voltlog(){
+    window.location.href = "landpage.html";
+}
+
+//CONCLUIR LOGIN
+function conclog(){
+    let em = document.getElementById('txt').value;
+    let s1 = document.getElementById('senha1').value;
+    //tratamento de erro
+    if(em == 0){
+        alert("Preencha o campo de email.");
+    }else if(s1 == 0){
+        alert("Preencha o campo da senha.");
+    }else{
+        //conclusão de login
+        window.location.href = "homealuno.html";
+    }
+
+}
+
 //CARROSSEL HOMEPAGE
 function moveSlide(step) {
     const slide = document.querySelector('.divcarrossel');
