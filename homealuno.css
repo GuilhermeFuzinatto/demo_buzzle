@@ -31,6 +31,9 @@ header{
 .headerlogo{
     height: 6rem;
     width: 20%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .logo{
@@ -42,6 +45,9 @@ header{
 .navegacao{
     height: 6rem;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .navegacao ul{
@@ -64,30 +70,31 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 
 .headerbotoes div{
-    background-image: linear-gradient(#e4e4e4, #fdfdfd);
-    border: 0.1rem solid #613a18;
+    background-color: linear-gradient(#e4e4e4, #fdfdfd);
+    border: 0.15rem solid #ffda33;
     border-radius: 5vh;
     width: 35%;
     height: 3rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .headerbotoes div:hover{
-    filter: brightness(95%);
+    background-color: #ffda33;
 }
 
 .perfil{
     width: 2.8rem;
 }
 
-.chief{
-    width: 2rem;
-}
+/*setinha*/
 
 .fundo{
     width: 100%;

@@ -9,6 +9,11 @@ Background Amarelo: linear-gradient(#fff09b, #ffe65b);
 
 */
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html{
     height: 1000px;
     background-image: url("imagens/colmeia21.jpg");
@@ -84,36 +89,39 @@ header{
     margin-top: 5%;
     width: 100%;
     height: 60%;
-    border: 0.70vh solid #613a18;
+    border: 0.70vh solid #ffda33;
     border-radius: 1.5vh;
     text-align: center;
     align-content: center;
     font-size: 125%;
     cursor: pointer;
+    background-color: #ffda33;
+    color: #613a18;
+    transition: 0.2s;
 }
 
 .botaolog:hover{
-    background-color: #613a18;
-    color: #fdfdfd;
-    transition: 0.2s;
+    scale: 105%;
+    filter: brightness(95%);
 }
 
 .botaocad{
     margin-top: 5%;
     width: 100%;
     height: 60%;
-    border: 0.70vh solid #613a18;
+    border: 0.70vh solid #ffda33;
     border-radius: 1.5vh;
     text-align: center;
     align-content: center;
     font-size: 125%;
     cursor: pointer;
+    color: #613a18;
+    transition: 0.2s;
 }
 
 .botaocad:hover{
-    background-color: #613a18;
-    color: #fdfdfd;
-    transition: 0.2s;
+    scale: 105%;
+    filter: brightness(95%);
 }
 
 main{
