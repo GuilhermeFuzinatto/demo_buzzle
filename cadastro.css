@@ -43,8 +43,10 @@ main{
 }
 
 #secmain{
+    position: relative;
+    margin-top: 5%;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -52,7 +54,7 @@ main{
 }
 
 #secmain button{
-    position: relative;
+    position: absolute;
     background-color: #fdfdfd;
     border: none;
     width: 30rem;
@@ -64,6 +66,14 @@ main{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+#divprof{
+    left: 17%;
+}
+
+#divalun{
+    right: 17%;
 }
 
 button p{
@@ -119,22 +129,23 @@ button div{
 
 /*animação ao clicar no divprof*/
 .animacaoprof{
-    animation: animaprof 2s forwards;
-    animation-delay: 0.5s;
+    animation: animaprof 0.5s forwards;
+    animation-delay: 0.2s;
 }
 
 .tiraalun{
-    animation: tiraalun 2s forwards;
-    animation-delay: 0.5s;
+    animation: tiraalun 0.5s forwards;
+    animation-delay: 0.2s;
 }
 
 .efx{
-    animation: efeito 0.5s forwards
+    animation: efeito 0.2s forwards
 }
 
 @keyframes animaprof{
     to{
-        transform: translateX(56.44%);
+        left: 50%;
+        transform: translate(-50%);
         height: 40rem;
         width: 35rem;
     }
@@ -155,22 +166,23 @@ button div{
 
 /*animação ao clicar no divalun*/
 .animacaoalun{
-    animation: animaalun 2s forwards;
-    animation-delay: 0.5s;
+    animation: animaalun 0.5s forwards;
+    animation-delay: 0.2s;
 }
 
 .tiraprof{
-    animation: tiraprof 2s forwards;
-    animation-delay: 0.5s;
+    animation: tiraprof 0.5s forwards;
+    animation-delay: 0.2s;
 }
 
 .efx{
-    animation: efeito 0.5s forwards;
+    animation: efeito 0.2s forwards;
 }
 
 @keyframes animaalun{
     to{
-        transform: translateX(-56.3%);
+        right: 50%;
+        transform: translate(50%);
         height: 40rem;
         width: 35rem;
     }
@@ -334,7 +346,7 @@ button div{
 
 .divcad{
     animation: opaci 0.1s forwards, vemdiv 0.4s forwards;
-    animation-delay: 2s;
+    animation-delay: 0.5s;
 }
 
 @keyframes opaci{
