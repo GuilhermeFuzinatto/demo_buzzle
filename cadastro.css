@@ -362,7 +362,7 @@ button div{
     }
 }
 
-/*animação de voltar*/
+/*animação de voltar ARRUMAR/
 /*volta professor*/
 .saidivcad{
     animation: saiopaci 0.1 forwards, saidivcad 0.4s forwards;
@@ -382,7 +382,7 @@ button div{
 }
 
 .saiefx{
-    animation: saiefx 0.5s forwards;
+    animation: saiefx 0.2s forwards;
 }
 
 @keyframes saiefx{
@@ -392,21 +392,18 @@ button div{
     }
 }
 
-/*TERMINAR, ATUALMENTE N TEM TRANSIÇÃO NENHUMA*/
-/*
 .voltaprof{
-    animation: voltaprof 2s forwards;
-    animation-delay: 0.5s;
+    animation: voltaprof 0.5s forwards;
+    animation-delay: 0.2s;
 }
 
 @keyframes voltaprof{
     to{
-        transform: translateX(-56.44%);
+        left: 17%;
         height: 30rem;
         width: 30rem;
     }
 }
-*/
 
 /*volta aluno*/
 .saidivcad{
