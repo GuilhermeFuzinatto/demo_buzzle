@@ -74,6 +74,7 @@ header{
 }
 
 .headerbotoes div{
+    position: relative;
     background-color: linear-gradient(#e4e4e4, #fdfdfd);
     border: 0.15rem solid #ffda33;
     border-radius: 5vh;
@@ -91,10 +92,57 @@ header{
 }
 
 .perfil{
+    position: absolute;
+    left: 7.5%;
     width: 2.8rem;
 }
 
 /*setinha*/
+
+.headerbotoes span{
+    position: absolute;
+    width: 0.25rem;
+    height: 1.25rem;
+    border-radius: 100vh;
+    background-color: #1e1e1e;
+    transition: 0.5s;
+}
+
+.headerbotoes span:first-of-type{
+    right: 30%;
+    transform: rotate(-40deg);
+}
+
+.headerbotoes span:last-of-type{
+    right: 20%;
+    transform: rotate(40deg);
+}
+
+/*xzinho*/
+
+#span1.x1{
+    animation: virax1 0.5s forwards;
+}
+
+#span2.x2{
+    animation: virax2 0.5s forwards;
+}
+
+@keyframes virax1{
+    to{
+        height:1.5rem;
+        right: 25%;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes virax2{
+    to{
+        height:1.5rem;
+        right: 25%;
+        transform: rotate(45deg);
+    }
+}
 
 .fundo{
     width: 100%;
@@ -154,7 +202,7 @@ main{
     background-color: #fdfdfd;
     width: 80%;
     height: 15.6rem;
-    -webkit-mask-image: linear-gradient(to right, transparent 85%, black 100%);
+    mask-image: linear-gradient(to right, transparent 85%, black 100%);
 }
 
 .carrossel{

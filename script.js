@@ -146,6 +146,22 @@ function conclog(){
 
 }
 
+//MENU AMBORGUI HOMEPAGE
+
+let amborguiclick = 0;
+
+function amborgui(){
+    if(amborguiclick == 0){
+        document.getElementById('span1').classList.add("x1");
+        document.getElementById('span2').classList.add("x2");
+        amborguiclick = 1;
+    }else{
+        document.getElementById('span1').classList.remove("x1");
+        document.getElementById('span2').classList.remove("x2");
+        amborguiclick = 0;
+    }
+}
+
 //CARROSSEL HOMEPAGE
 function moveSlide(step) {
     const slide = document.querySelector('.divcarrossel');
