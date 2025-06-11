@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS Aluno(
   	al_nascimento DATE NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Profs(
+CREATE TABLE IF NOT EXISTS Prof(
   	pr_id VARCHAR(12) PRIMARY KEY UNIQUE,
   	pr_email TEXT UNIQUE NOT NULL,
   	pr_nome TEXT NOT NULL,
@@ -16,13 +16,21 @@ CREATE TABLE IF NOT EXISTS Profs(
   	pr_nascimento DATE NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Quizes(
-  	qz_id VARCHAR(12) PRIMARY KEY UNIQUE NOT NULL,
+CREATE TABLE IF NOT EXISTS Turma(
+  	tu_id VARCHAR(12) PRIMARY KEY UNIQUE,
+  	tu_pr_id VARCHAR(12),
+  	tu_al_id VARCHAR(12),
+  	FOREIGN KEY (tu_pr_id) REFERENCES Prof (pr_id),
+  	FOREIGN KEY (tu_al_id) REFERENCES Aluno (al_id)
+);
+
+CREATE TABLE IF NOT EXISTS Quiz(
+  	qz_id VARCHAR(12) PRIMARY KEY UNIQUE,
   	qz_enunciado VARCHAR(200) NOT NULL,
   	qz_alternativa VARCHAR(120) NOT NULL,
   	qz_certa VARCHAR(120) NOT NULL,
   	qz_valor INTEGER NOT NULL,
   	qz_prazo DATE NOT NULL
-  	pr_id VARCHAR(12),
-  	FOREIGN KEY (pr_id) REFERENCES Profs (pr_id)
+  	qz_pr_id VARCHAR(12),
+  	FOREIGN KEY (qz_pr_id) REFERENCES Prof (pr_id)
 );
