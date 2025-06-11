@@ -23,4 +23,6 @@ CREATE TABLE IF NOT EXISTS Quizes(
   	qz_certa VARCHAR(120) NOT NULL,
   	qz_valor INTEGER NOT NULL,
   	qz_prazo DATE NOT NULL
+  	pr_id VARCHAR(12),
+  	FOREIGN KEY (pr_id) REFERENCES Profs (pr_id)
 );
