@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS Aluno(
+  	al_id VARCHAR(12) PRIMARY KEY UNIQUE,
+  	al_email TEXT UNIQUE NOT NULL,
+  	al_nome TEXT NOT NULL,
+  	al_senha TEXT NOT NULL,
+	al_nivel INTEGER,
+  	al_nascimento DATE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Profs(
+  	pr_id VARCHAR(12) PRIMARY KEY UNIQUE,
+  	pr_email TEXT UNIQUE NOT NULL,
+  	pr_nome TEXT NOT NULL,
+  	pr_senha TEXT NOT NULL,
+	pr_nivel INTEGER,
+  	pr_nascimento DATE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Quizes(
+  	qz_id VARCHAR(12) PRIMARY KEY UNIQUE NOT NULL,
+  	qz_enunciado VARCHAR(200) NOT NULL,
+  	qz_alternativa VARCHAR(120) NOT NULL,
+  	qz_certa VARCHAR(120) NOT NULL,
+  	qz_valor INTEGER NOT NULL,
+  	qz_prazo DATE NOT NULL
+);
