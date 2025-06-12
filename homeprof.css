@@ -178,17 +178,18 @@ main{
     -webkit-mask-image: linear-gradient(to bottom, transparent 5%, black 25%);
     display: flex;
     flex-wrap: wrap;
-    padding-top: ;
+    justify-content: center;
+    padding-top: 8%;
 }
 
 .mainsec{
     margin-top: 10rem;
-    margin-left: 8rem;
     width: 80%;
     height: 25.6rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .mainsec h1{
@@ -199,26 +200,28 @@ main{
 .mask1{
     z-index: 1;
     position: absolute;
-    top: 43.9rem;
+    top: 53rem;
     background-color: #fdfdfd;
     width: 80%;
-    height: 15.6rem;
+    height: 17.5rem;
     mask-image: linear-gradient(to right, transparent 85%, black 100%);
+    pointer-events: none;
 }
 
 .mask2{
     z-index: 1;
     position: absolute;
-    top: 79.5rem;
+    top: 88rem;
     background-color: #fdfdfd;
     width: 80%;
-    height: 15.6rem;
+    height: 17.5rem;
     mask-image: linear-gradient(to right, transparent 85%, black 100%);
+    pointer-events: none;
 }
 
 .carrossel{
-    width: 100%;
-    overflow: hidden;
+    width: 90%;
+    overflow-x: clip;
     display: flex;
     align-items: center;
     position: relative;
@@ -229,6 +232,8 @@ main{
     display: flex;
     transition: transform 0.5s ease;
 }
+
+
 
 .divcarrossel{
     flex: 0 0 15rem;
@@ -241,11 +246,12 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
 }
 
 .divcarrossel:hover{
     filter: brightness(95%);
-    transition: 0.2s;
+    scale: 105%;
 }
 
 .carrossel button{
