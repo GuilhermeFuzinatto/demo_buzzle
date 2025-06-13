@@ -30,7 +30,32 @@ CREATE TABLE IF NOT EXISTS Quiz(
   	qz_alternativa VARCHAR(120) NOT NULL,
   	qz_certa VARCHAR(120) NOT NULL,
   	qz_valor INTEGER NOT NULL,
-  	qz_prazo DATE NOT NULL
+  	qz_prazo DATE NOT NULL,
   	qz_pr_id VARCHAR(12),
   	FOREIGN KEY (qz_pr_id) REFERENCES Prof (pr_id)
 );
+
+/*
+insert into Aluno (al_id, al_email, al_nome, al_senha, al_nascimento)
+values
+('696969696969', 'vaitomanocu@gmail.com', 'caio', 'qnasdpop', '2008-08-15'),
+('420420420420', 'vaisefude@gmail.com', 'chupacul', 'asdfg4', '1998-09-08'),
+('777777777777', 'vaiprocaralho@hotmail.com', 'denis', 'sfkvsf', '2001-09-11');
+
+INSERT INTO Prof (pr_id, pr_email, pr_nome, pr_senha, pr_nivel, pr_nascimento) VALUES
+('111111111111', 'fodaseprof1@gmail.com', 'Marcos PauNoCu', 'senha123', 5, '1980-05-10'),
+('222222222222', 'profcaralhudo@escola.com', 'Luciana Treta', 'abc123', 4, '1985-03-21'),
+('333333333333', 'ensinaessaPorra@zmail.com', 'Jorge Krl', 'senhafoda', 3, '1990-12-01');
+
+INSERT INTO Turma (tu_id, tu_pr_id, tu_al_id) VALUES
+('TURMA001', '111111111111', '696969696969'),
+('TURMA002', '222222222222', '420420420420'),
+('TURMA003', '333333333333', '777777777777');
+
+INSERT INTO Quiz (qz_id, qz_enunciado, qz_alternativa, qz_certa, qz_valor, qz_prazo, qz_pr_id) VALUES
+('QUIZ001', 'Qual o caralho do resultado de 2+2?', 'a) 3; b) 4; c) 5', 'b) 4', 10, '2025-06-20', '111111111111'),
+('QUIZ002', 'Essa porra de equação x^2 = 9 tem qual raiz positiva?', 'a) 3; b) -3; c) Foda-se', 'a) 3', 10, '2025-06-25', '222222222222'),
+('QUIZ003', 'Descubra o cu da capital da França', 'a) Paris; b) Roma; c) Vai tomar no cu', 'a) Paris', 15, '2025-06-30', '333333333333');
+*/
+
+select * from Quiz;
