@@ -19,9 +19,15 @@ CREATE TABLE IF NOT EXISTS Prof(
 CREATE TABLE IF NOT EXISTS Turma(
   	tu_id VARCHAR(12) PRIMARY KEY UNIQUE,
   	tu_pr_id VARCHAR(12),
-  	tu_al_id VARCHAR(12),
-  	FOREIGN KEY (tu_pr_id) REFERENCES Prof (pr_id),
-  	FOREIGN KEY (tu_al_id) REFERENCES Aluno (al_id)
+  	FOREIGN KEY (tu_pr_id) REFERENCES Prof (pr_id)
+);
+
+CREATE TABLE IF NOT EXISTS AlunoTurma(
+  	AT_tu_id VARCHAR(12),
+    AT_al_id VARCHAR(12),
+    PRIMARY KEY (AT_tu_id, AT_al_id),
+    FOREIGN KEY (AT_tu_id) REFERENCES Turma (tu_id),
+    FOREIGN KEY (AT_al_id) REFERENCES Aluno (al_id)
 );
 
 CREATE TABLE IF NOT EXISTS Quiz(
@@ -35,7 +41,6 @@ CREATE TABLE IF NOT EXISTS Quiz(
   	FOREIGN KEY (qz_pr_id) REFERENCES Prof (pr_id)
 );
 
-/*
 insert into Aluno (al_id, al_email, al_nome, al_senha, al_nascimento)
 values
 ('696969696969', 'vaitomanocu@gmail.com', 'caio', 'qnasdpop', '2008-08-15'),
@@ -47,15 +52,20 @@ INSERT INTO Prof (pr_id, pr_email, pr_nome, pr_senha, pr_nivel, pr_nascimento) V
 ('222222222222', 'profcaralhudo@escola.com', 'Luciana Treta', 'abc123', 4, '1985-03-21'),
 ('333333333333', 'ensinaessaPorra@zmail.com', 'Jorge Krl', 'senhafoda', 3, '1990-12-01');
 
-INSERT INTO Turma (tu_id, tu_pr_id, tu_al_id) VALUES
-('TURMA001', '111111111111', '696969696969'),
-('TURMA002', '222222222222', '420420420420'),
-('TURMA003', '333333333333', '777777777777');
+INSERT INTO Turma (tu_id, tu_pr_id,) VALUES
+('TURMA001', '111111111111'),
+('TURMA002', '222222222222'),
+('TURMA003', '333333333333');
 
 INSERT INTO Quiz (qz_id, qz_enunciado, qz_alternativa, qz_certa, qz_valor, qz_prazo, qz_pr_id) VALUES
 ('QUIZ001', 'Qual o caralho do resultado de 2+2?', 'a) 3; b) 4; c) 5', 'b) 4', 10, '2025-06-20', '111111111111'),
 ('QUIZ002', 'Essa porra de equação x^2 = 9 tem qual raiz positiva?', 'a) 3; b) -3; c) Foda-se', 'a) 3', 10, '2025-06-25', '222222222222'),
 ('QUIZ003', 'Descubra o cu da capital da França', 'a) Paris; b) Roma; c) Vai tomar no cu', 'a) Paris', 15, '2025-06-30', '333333333333');
-*/
 
-select * from Quiz;
+insert into AlunoTurma (AT_tu_id, AT_al_id) values
+('TURMA001', '696969696969'),
+('TURMA001', '420420420420'),
+('TURMA001', '777777777777'),
+('TURMA002', '696969696969'),
+('TURMA002', '420420420420'),
+('TURMA003', '696969696969');
