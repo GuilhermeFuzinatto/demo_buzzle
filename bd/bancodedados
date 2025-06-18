@@ -47,7 +47,14 @@ CREATE TABLE IF NOT EXISTS Quiz(
 
 CREATE TABLE IF NOT EXISTS Resposta(
   	re_id VARCHAR(12) PRIMARY KEY UNIQUE,
-  
+  	re_data DATE,
+  	re_hora TIME,
+  	re_porcentagem FLOAT,
+  	re_nota INTEGER,
+  	re_al_id VARCHAR(12),
+  	re_qz_id VARCHAR(12),
+  	FOREIGN KEY (re_al_id) REFERENCES Aluno (al_id),
+  	foreign key (re_qz_id) references Quiz (qz_id)
 );
 
 /*
