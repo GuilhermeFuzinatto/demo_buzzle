@@ -106,7 +106,7 @@ V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V V 
 */
 
 //CONCLUIR CADASTRO
-function conccad(){
+function avanc(){
     let em = document.getElementById('txt').value;
     let s1 = document.getElementById('senha1').value;
     let s2 = document.getElementById('senha2').value;
@@ -119,10 +119,15 @@ function conccad(){
     }else if(s1!=s2){
         alert("As senhas são diferentes, por favor tente novamente.");
     }else{
-        //conclusão de cadastro
-        alert("Cadastro concluído!");
-        window.location.href = "homealuno.html";
+        //avançar para etapa final do cadastro
+        document.getElementById('divinput').className = 'saidafrentedivinputdocaralho'
     }
+}
+
+function conccad(){
+    //conclusão de cadastro
+    alert("Cadastro concluído!");
+    window.location.href = "homealuno.html";
 }
 
 //VOLTAR LOGIN
@@ -151,6 +156,7 @@ function conclog(){
 let amborguiclick = 0;
 
 function amborgui(){
+    alert("Amborgui clicado");
     if(amborguiclick == 0){
         document.getElementById('span1').classList.add("x1");
         document.getElementById('span2').classList.add("x2");
