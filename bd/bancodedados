@@ -4,8 +4,8 @@ CREATE TABLE IF NOT EXISTS Aluno(
   	al_email TEXT UNIQUE NOT NULL,
   	al_nome TEXT NOT NULL,
   	al_senha TEXT NOT NULL,
-	al_nivel INTEGER,
-  	al_nascimento DATE NOT NULL
+  	al_bio VARCHAR(200),
+	al_nivel INTEGER
 );
 
 /*criação da tabela Prof e seus atributos*/
@@ -14,13 +14,15 @@ CREATE TABLE IF NOT EXISTS Prof(
   	pr_email TEXT UNIQUE NOT NULL,
   	pr_nome TEXT NOT NULL,
   	pr_senha TEXT NOT NULL,
-	pr_nivel INTEGER,
-  	pr_nascimento DATE NOT NULL
+  	pr_bio VARCHAR(200),
+	pr_nivel INTEGER
 );
 
 /*criação da tabela Turma e seus atributos*/
 CREATE TABLE IF NOT EXISTS Turma(
   	tu_id VARCHAR(12) PRIMARY KEY UNIQUE,
+  	tu_nome VARCHAR(40) NOT NULL,
+  	tu_desc VARCHAR(120),
   	tu_pr_id VARCHAR(12),
   	FOREIGN KEY (tu_pr_id) REFERENCES Prof (pr_id)
 );
@@ -34,22 +36,38 @@ CREATE TABLE IF NOT EXISTS AlunoTurma(
     FOREIGN KEY (AT_al_id) REFERENCES Aluno (al_id)
 );
 
+/*criação da tabela Quiz e seus atributos*/
 CREATE TABLE IF NOT EXISTS Quiz(
   	qz_id VARCHAR(12) PRIMARY KEY UNIQUE,
-  	qz_enunciado VARCHAR(200) NOT NULL,
-  	qz_alternativa VARCHAR(120) NOT NULL,
-  	qz_certa VARCHAR(120) NOT NULL,
   	qz_valor INTEGER NOT NULL,
   	qz_prazo DATE NOT NULL,
   	qz_pr_id VARCHAR(12),
   	FOREIGN KEY (qz_pr_id) REFERENCES Prof (pr_id)
 );
 
+/*criação da tabela Pergunta e seus atributos*/
+CREATE TABLE IF NOT EXISTS Pergunta(
+  	pe_numero INTEGER AUTOINCREMENT PRIMARY KEY,
+  	pe_enunciado VARCHAR(200) NOT NULL,
+  	pe_qz_id VARCHAR(12),
+  	FOREIGN KEY (pe_qz_id) REFERENCES Quiz (qz_id)
+);
+
+/*criação da tabela Alternativa e seus atributos*/
+CREATE TABLE IF NOT EXISTS Alternativa(
+  	av_numero INTEGER AUTOINCREMENT PRIMARY KEY,
+  	av_texto VARCHAR(120) NOT NULL,
+  	av_correta BIT, /*status*/
+  	av_pe_numero INTEGER,
+  	FOREIGN KEY (av_pe_numero) REFERENCES Pergunta (pe_numero)
+);
+
+/*criação da tabela Resposta e seus atributos*/
 CREATE TABLE IF NOT EXISTS Resposta(
   	re_id VARCHAR(12) PRIMARY KEY UNIQUE,
   	re_data DATE,
   	re_hora TIME,
-  	re_porcentagem FLOAT,
+  	re_certas INTEGER,
   	re_nota INTEGER,
   	re_al_id VARCHAR(12),
   	re_qz_id VARCHAR(12),
@@ -106,5 +124,3 @@ JOIN Turma ON AlunoTurma.AT_tu_id = Turma.tu_id;
 
 SELECT * from AlunosPorTurma;
 */
-
-
