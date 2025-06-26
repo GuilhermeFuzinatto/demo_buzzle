@@ -25,3 +25,25 @@
 
 *CLASSROOM
   de longe o pior pra criar atividade, eu só atribuo titulos, desc, valor etc pelo app, e o questionário de fato eu tenho q fazer atráves do google forms por exemplo
+
+
+
+**ANOTAÇÕES DE COISAS QUE FALTAM**
+
+*Geral
+  deixar bonito e original, adicionar os logos corretas, integrar com banco de dados 
+
+*Landpage
+  informaçõesde uso, sobre o sistema e etc
+
+*Cadastro
+  nome e foto (foto opcional)
+
+*Login
+  acho q n falta nada
+
+*Home Aluno
+  praticamente tudo, falta acesaar as turmas e os quizes
+
+*Home Prof
+  falta ter como criar turmas e quizes e ver os relatiorios 
