@@ -53,13 +53,16 @@ main{
     cursor: pointer;
     transition: 0.5s;
     filter: brightness(120%);
+    background-image: linear-gradient(#ffda33, #d3b11a);
+    filter: brightness(95%);
 }
 
 #secalternativas div:hover{
     scale: 105%;
-    filter: brightness(125%);
+    filter: brightness(100%);
 }
 
+/*
 #a{
     background-image: linear-gradient(rgb(197, 36, 197), rgb(119, 24, 119));
 }
@@ -75,3 +78,4 @@ main{
 #d{
     background-image: linear-gradient(rgb(84, 116, 223), rgb(49, 69, 138));
 }
+*/
