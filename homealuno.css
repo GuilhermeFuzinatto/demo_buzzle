@@ -224,17 +224,58 @@ main{
     height: 15rem;
     margin-right: 2rem;
     border: 0.25rem solid #ffda33;
-    border-radius: 5vh;
+    border-radius: 4vh;
     background-color: #fdfdfd;
     cursor: pointer;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .divcarrossel:hover{
     filter: brightness(95%);
     transition: 0.2s;
+}
+
+.divcarrossel section{
+    width: 100%;
+    height: 50%;
+}
+
+.thumbsec{
+    background-color: red;
+}
+
+.thumbsec img{
+    width: 100%;
+    height: 100%;
+}
+
+.infosec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 4%;
+}
+
+.infosec h1{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    font-size: 1.25rem;
+}
+
+.infosec p{
+    width: 100%;
+    height: 15%;
+}
+
+.infosec p:first-of-type{
+    /*diminuir o gap q esse tem pro titulo*/
+    background-color: blue;
 }
 
 .carrossel button{
