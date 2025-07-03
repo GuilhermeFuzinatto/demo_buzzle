@@ -224,7 +224,7 @@ main{
     height: 15rem;
     margin-right: 2rem;
     border: 0.25rem solid #ffda33;
-    border-radius: 4vh;
+    border-radius: 3.5vh;
     background-color: #fdfdfd;
     cursor: pointer;
     display: flex;
@@ -244,23 +244,23 @@ main{
     height: 50%;
 }
 
-.thumbsec{
-    background-color: red;
-}
+/*TESTE DE MODELOS DE CARDS*/
 
-.thumbsec img{
+/*MODELO 1*/
+.thumbsec1 img{
     width: 100%;
     height: 100%;
 }
 
-.infosec{
+.infosec1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding-left: 4%;
+    padding-right: 4%;
 }
 
-.infosec h1{
+.infosec1 h1{
     display: flex;
     align-items: center;
     width: 100%;
@@ -268,15 +268,47 @@ main{
     font-size: 1.25rem;
 }
 
-.infosec p{
+.infosec1 p{
     width: 100%;
     height: 15%;
 }
 
-.infosec p:first-of-type{
-    /*diminuir o gap q esse tem pro titulo*/
-    background-color: blue;
+/*MODELO 2*/
+.thumbsec2 img{
+    width: 100%;
+    height: 100%;
 }
+
+.infosec2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.infosec2 h1{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    font-size: 1.25rem;
+}
+
+.infosec2 p{
+    width: 50%;
+    height: 25%;
+}
+
+.infosec2 .qzprof, .infosec2 .qzprazo{
+    text-align: left;
+}
+
+.infosec2 .qzturma, .infosec2 .qzvalor{
+    text-align: right;
+}
+
+/*FIM TESTE*/
 
 .carrossel button{
     position: absolute;
