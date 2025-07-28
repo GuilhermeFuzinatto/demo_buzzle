@@ -295,16 +295,13 @@ main{
     font-size: 1.25rem;
 }
 
-.infosec2 p{
-    width: 50%;
-    height: 25%;
-}
-
 .infosec2 .qzprof, .infosec2 .qzprazo{
+    width: 60%;
     text-align: left;
 }
 
 .infosec2 .qzturma, .infosec2 .qzvalor{
+    width: 40%;
     text-align: right;
 }
 
