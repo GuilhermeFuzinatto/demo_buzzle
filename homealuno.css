@@ -277,6 +277,7 @@ main{
 .thumbsec2 img{
     width: 100%;
     height: 100%;
+    mask-image: linear-gradient(to top, transparent 0%, black 15%);;
 }
 
 .infosec2{
@@ -289,11 +290,24 @@ main{
 
 .infosec2 h1{
     display: flex;
+    white-space: nowrap;
     align-items: center;
     width: 100%;
     height: 30%;
     font-size: 1.25rem;
+    animation: marquee 5s linear infinite alternate;
+    animation-delay: 1s;
 }
+
+/*animação marquee*/
+
+@keyframes marquee{
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/*fim marquee*/
 
 .infosec2 .qzprof, .infosec2 .qzprazo{
     width: 60%;
