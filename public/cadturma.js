@@ -24,7 +24,7 @@ async function cadastrarTurma(event) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(cliente)
+            body: JSON.stringify(turma)
         });
 
         const result = await response.json();
@@ -39,4 +39,5 @@ async function cadastrarTurma(event) {
     }
 
 }
+
 
