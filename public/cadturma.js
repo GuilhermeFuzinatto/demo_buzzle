@@ -30,7 +30,6 @@ async function cadastrarTurma(event) {
         const result = await response.json();
         if (response.ok) {
             alert("Cliente cadastrado com sucesso!");
-            document.getElementById("cliente-form").reset();
         } else {
             alert(`Erro: ${result.message}`);
         }
@@ -40,3 +39,4 @@ async function cadastrarTurma(event) {
     }
 
 }
+
