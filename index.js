@@ -49,3 +49,13 @@ app.post('/turma', (req, res) => {
         res.status(201).send({ id: this.lastID, message: 'Turma cadastrada com sucesso.' });
     });
 });
+
+// Teste para verificar se o servidor está rodando
+app.get('/', (req, res) => {
+    res.send('Servidor está rodando e tabelas criadas!');
+});
+
+// Iniciando o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
