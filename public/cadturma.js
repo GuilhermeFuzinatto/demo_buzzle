@@ -37,8 +37,4 @@ async function cadastrarTurma(event) {
         console.error("Erro na solicitação:", err);
         alert("Erro ao cadastrar cliente.");
     }
-
 }
-
-
-
