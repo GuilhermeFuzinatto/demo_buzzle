@@ -19,7 +19,7 @@ async function cadastrarTurma(event) {
     };
 
     try {
-        const response = await fetch('/clientes', {
+        const response = await fetch('/turma', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -38,4 +38,5 @@ async function cadastrarTurma(event) {
         console.error("Erro na solicitação:", err);
         alert("Erro ao cadastrar cliente.");
     }
+
 }
