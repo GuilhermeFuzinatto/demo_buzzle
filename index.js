@@ -33,6 +33,8 @@ db.serialize(() => {
     console.log('Tabelas criadas com sucesso.');
 });
 
+////////////ROTAS TURMA////////////
+
 // Cadastrar turma
 app.post('/turma', (req, res) => {
     const { id, nome, desc } = req.body;
