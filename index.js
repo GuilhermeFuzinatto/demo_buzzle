@@ -8,8 +8,9 @@ const port = process.env.PORT || 3000;
 // Serve os arquivos estáticos da pasta "public"
 app.use(express.static('public'));
 
-// Configura o body-parser para ler JSON
+// Configura o body-parser para ler JSON e formulários
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Conexão com o banco de dados SQLite
 const db = new sqlite3.Database('./database.db', (err) => {
@@ -36,7 +37,7 @@ db.serialize(() => {
 ////////////ROTAS TURMA////////////
 
 // Cadastrar turma
-app.post('/cadturma', (req, res) => {
+app.post('/turma', (req, res) => {
     const { id, nome, desc } = req.body;
 
     if (!nome) {
