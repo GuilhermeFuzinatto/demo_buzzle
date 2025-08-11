@@ -36,7 +36,7 @@ db.serialize(() => {
 ////////////ROTAS TURMA////////////
 
 // Cadastrar turma
-app.post('/turma', (req, res) => {
+app.post('/cadturma', (req, res) => {
     const { id, nome, desc } = req.body;
 
     if (!nome) {
