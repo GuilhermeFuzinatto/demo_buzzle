@@ -38,14 +38,14 @@ db.serialize(() => {
 
 // Cadastrar turma
 app.post('/turma', (req, res) => {
-    const { id, nome, desc } = req.body;
+    const { tu_id, tu_nome, tu_desc } = req.body;
 
     if (!nome) {
         return res.status(400).send('Nome é um campo obrigatório.');
     }
 
-    const query = `INSERT INTO Turma (id, nome, desc) VALUES (?, ?, ?)`;
-    db.run(query, [id, nome, desc], function (err) {
+    const query = `INSERT INTO Turma (tu_id, tu_nome, tu_desc) VALUES (?, ?, ?)`;
+    db.run(query, [tu_id, tu_nome, tu_desc], function (err) {
         if (err) {
             return res.status(500).send('Erro ao cadastrar turma.');
         }
