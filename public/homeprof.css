@@ -198,7 +198,7 @@ main{
 }
 
 .mainsec{
-    margin-top: 10rem;
+    margin-top: -5rem;
     width: 80%;
     height: 25.6rem;
     display: flex;
@@ -212,44 +212,20 @@ main{
     font-size: 2.5rem;
 }
 
-.mask1{
-    z-index: 1;
-    position: absolute;
-    top: 53rem;
-    background-color: #fdfdfd;
-    width: 80%;
-    height: 17.5rem;
-    mask-image: linear-gradient(to right, transparent 85%, black 100%);
-    pointer-events: none;
-}
-
-.mask2{
-    z-index: 1;
-    position: absolute;
-    top: 88rem;
-    background-color: #fdfdfd;
-    width: 80%;
-    height: 17.5rem;
-    mask-image: linear-gradient(to right, transparent 85%, black 100%);
-    pointer-events: none;
-}
-
 .carrossel{
     width: 90%;
     overflow-x: clip;
     display: flex;
     align-items: center;
     position: relative;
-    mask-image: linear-gradient(to left, transparent 1%, black 10%);
 }
 
 .seccarrossel{
     width: max-content;
     display: flex;
     transition: transform 0.5s ease;
+    /*mask-image: linear-gradient(to left, transparent 10%, black 70%);*/
 }
-
-
 
 .divcarrossel{
     flex: 0 0 15rem;
