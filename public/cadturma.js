@@ -1,6 +1,6 @@
 //GERAR ID 
 function gerarId() {
-    let id = '';
+    let id;
     for (let i = 0; i < 6; i++) {
         const rand = Math.floor(Math.random() * 36); // número de 0 a 35
         id += rand.toString(36); // converte para caractere base36
@@ -37,4 +37,5 @@ async function cadastrarTurma(event) {
         console.error("Erro na solicitação:", err);
         alert("Erro ao cadastrar cliente.");
     }
+
 }
