@@ -10,7 +10,6 @@ app.use(express.static('public'));
 
 // Configura o body-parser para ler JSON e formulários
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // Conexão com o banco de dados SQLite
 const db = new sqlite3.Database('./database.db', (err) => {
