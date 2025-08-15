@@ -24,7 +24,7 @@ const db = new sqlite3.Database('./database.db', (err) => {
 db.serialize(() => {
     db.run(`
         CREATE TABLE IF NOT EXISTS Turma(
-  	        tu_id VARCHAR(12) PRIMARY KEY UNIQUE,
+  	        tu_id VARCHAR(12) PRIMARY KEY UNIQUE AUTOINCREMENT,
   	        tu_nome VARCHAR(40) NOT NULL,
   	        tu_desc VARCHAR(120)
         );
