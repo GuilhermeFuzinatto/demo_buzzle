@@ -1,4 +1,5 @@
 //GERAR ID 
+/*
 function gerarId() {
     let id;
     for (let i = 0; i < 6; i++) {
@@ -7,13 +8,13 @@ function gerarId() {
     }
     return id;
 }
+*/
 
 //CADASTRO DE TURMA
 async function cadastrarTurma(event) {
     event.preventDefault();
 
     const turma = {
-        id: gerarId(),
         nome: document.getElementById("nome").value,
         desc: document.getElementById("desc").value
     };
