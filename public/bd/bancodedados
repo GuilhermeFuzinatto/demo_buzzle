@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS Aluno(
 
 /*criação da tabela Prof e seus atributos*/
 CREATE TABLE IF NOT EXISTS Prof(
-  	pr_id VARCHAR(12) PRIMARY KEY UNIQUE,
+  	pr_id VARCHAR(12) PRIMARY KEY UNIQUE AUTOINCREMENT,
   	pr_email TEXT UNIQUE NOT NULL,
   	pr_nome TEXT NOT NULL,
   	pr_senha TEXT NOT NULL,
