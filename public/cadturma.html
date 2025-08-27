@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="cadturma.css">
 </head>
 <body>
-    <script src="cadturma.js"></script>
     <a href="homeprof.html"><button class="retorno">&#10094;</button></a>
     <div class="container">
         <h1>Cadastrar Turma</h1>
@@ -18,8 +17,10 @@
             <label for="ano">Descrição da Turma:</label>
             <input type="text" id="desc" name="desc" placeholder="Insira a descrição (opcional)" required>
 
-            <button type="submit">Cadastrar</button>
+            <button type="button" onclick="cadastrarTurma(event)">Cadastrar</button>
         </form>
     </div>
+    <script src="cadturma.js"></script>
+
 </body>
 </html>
