@@ -24,12 +24,12 @@ const db = new sqlite3.Database('./database.db', (err) => {
 db.serialize(() => {
     db.run(`
         CREATE TABLE IF NOT EXISTS Turma(
-  	        tu_id VARCHAR(12) PRIMARY KEY UNIQUE AUTOINCREMENT,
-  	        tu_nome VARCHAR(40) NOT NULL,
-  	        tu_desc VARCHAR(120)
+            tu_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            tu_nome VARCHAR(40) NOT NULL,
+            tu_desc VARCHAR(120)
         );
     `);
-    
+
     console.log('Tabelas criadas com sucesso.');
 });
 
@@ -37,14 +37,14 @@ db.serialize(() => {
 
 // Cadastrar turma
 app.post('/turma', (req, res) => {
-    const { tu_id, tu_nome, tu_desc } = req.body;
+    const { nome, desc } = req.body;
 
     if (!nome) {
         return res.status(400).send('Nome é um campo obrigatório.');
     }
 
-    const query = `INSERT INTO Turma (tu_id, tu_nome, tu_desc) VALUES (?, ?, ?)`;
-    db.run(query, [tu_id, tu_nome, tu_desc], function (err) {
+    const query = `INSERT INTO Turma (tu_nome, tu_desc) VALUES (?, ?)`;
+    db.run(query, [nome, desc], function (err) {
         if (err) {
             return res.status(500).send('Erro ao cadastrar turma.');
         }
