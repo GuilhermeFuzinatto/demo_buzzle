@@ -2,7 +2,7 @@
 async function cadastrarProf(event) {
     event.preventDefault();
 
-    const turma = {
+    const prof = {
         email: document.getElementById("txt").value,
         senha: document.getElementById("senha1").value
     };
