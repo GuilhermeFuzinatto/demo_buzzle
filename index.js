@@ -28,6 +28,12 @@ db.serialize(() => {
             tu_nome VARCHAR(40) NOT NULL,
             tu_desc VARCHAR(120)
         );
+
+        CREATE TABLE IF NOT EXISTS Prof(
+            pr_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  	        pr_email TEXT UNIQUE NOT NULL,
+  	        pr_senha TEXT NOT NULL,
+        );
     `);
 
     console.log('Tabelas criadas com sucesso.');
@@ -49,6 +55,35 @@ app.post('/turma', (req, res) => {
             return res.status(500).send('Erro ao cadastrar turma.');
         }
         res.status(201).send({ id: this.lastID, message: 'Turma cadastrada com sucesso.' });
+    });
+});
+
+// Teste para verificar se o servidor está rodando
+app.get('/', (req, res) => {
+    res.send('Servidor está rodando e tabelas criadas!');
+});
+
+// Iniciando o servidor
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
+
+////////////ROTAS PROF////////////
+
+// Cadastrar prof
+app.post('/prof', (req, res) => {
+    const { email, senha } = req.body;
+
+    if (!email || !senha) {
+        return res.status(400).send('email e senha são campos obrigatórios.');
+    }
+
+    const query = `INSERT INTO Prof (pr_email, pr_senha) VALUES (?, ?)`;
+    db.run(query, [email, senha], function (err) {
+        if (err) {
+            return res.status(500).send('Erro ao cadastrar conta.');
+        }
+        res.status(201).send({ id: this.lastID, message: 'Conta cadastrada com sucesso.' });
     });
 });
 
